@@ -7,6 +7,6 @@ do
     echo "$dir"
     echo "$dir" | xargs mkdir -p
     cd "$dir"
-    echo "$line" | xargs nmap -A > log 
+    echo "$line" | sudo xargs nmap -A > log 
     cd -
 done < /tmp/uniq_ip
