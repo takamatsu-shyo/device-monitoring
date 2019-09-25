@@ -3,7 +3,7 @@
 # nmap -A to all hosts
 while IFS= read -r line
 do
-    dir=$(echo "$line" | sed 's/\./-/g' |  sed 's/^/\/tmp\/log\/nmapA\//g')
+    dir=$HOME"/log/nmapA/"$line
     date_str=$(date -Iminute)
     logfile=""$date_str"_log"
     echo "$dir"
@@ -11,5 +11,6 @@ do
     cd "$dir"
     echo "$line" | sudo xargs nmap -A > $logfile 
     cd -
-done < /tmp/uniq_ip
+done < ~/log/uniq_ip
 
+./gen_contents.sh
