@@ -13,4 +13,4 @@ do
     cd -
 done < ~/log/uniq_ip
 
-./gen_contents.sh
+~/device-monitoring/gen_contents.sh
