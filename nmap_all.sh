@@ -12,5 +12,3 @@ do
     echo "$line" | sudo xargs nmap -A > $logfile 
     cd -
 done < ~/log/uniq_ip
-
-~/device-monitoring/gen_contents.sh
