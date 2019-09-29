@@ -14,11 +14,19 @@ do
 done < /tmp/dir
 
 # generate html file
+TXT_FILE=~/log/nmapA_list.txt
+HTML_FILE=~/log/nmapA_list.html
+
 find ~/log/nmapA/ -mindepth 2 -name "largest_log" | sort -V > /tmp/largest_logs
-cat /tmp/largest_logs | xargs cat | sed -e "s/Starting/\n\n----------\nStarting/g" > ~/log/nmapA_list.txt
-echo "<xmp>" > ~/log/nmapA_list.html
-cat ~/log/nmapA_list.txt >> ~/log/nmapA_list.html
-echo "</xmp>" >> ~/log/nmapA_list.html
+
+REPORT_DATE=$(echo 'Report generated: ')
+REPORT_DATE+=$(date -Iminute)
+echo $REPORT_DATE >$TXT_FILE 
+cat /tmp/largest_logs | xargs cat | sed -e "s/Starting/\n\n----------\nStarting/g" >>$TXT_FILE 
+
+echo "<xmp>" >$HTML_FILE 
+cat ~/log/nmapA_list.txt >>$HTML_FILE
+echo "</xmp>" >>$HTML_FILE
 
 # link to http server
 # sudo ln -s /tmp/nmapA_list.html /var/www/html
