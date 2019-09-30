@@ -1,4 +1,5 @@
 #!/bin/bash
+# This script generate one page report about nmap -A to all hosts
 
 # pick largest report
 find ~/log/nmapA -mindepth 1 -type d | 

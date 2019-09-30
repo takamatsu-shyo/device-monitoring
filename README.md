@@ -3,7 +3,7 @@ Monitoring devices in local network continuously.
 Idea; nmap shell script with cron job 
 
 # How to use
-Set crontab -e for scripts.
+Set crontab -e for scripts.  
 
 # TODO
 -Edit html: color shceme

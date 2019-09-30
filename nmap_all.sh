@@ -1,6 +1,6 @@
 #!/bin/bash
+# nmap -A to all hosts in LAN
 
-# nmap -A to all hosts
 while IFS= read -r line
 do
     dir=$HOME"/log/nmapA/"$line

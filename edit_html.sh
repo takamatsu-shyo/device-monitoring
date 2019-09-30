@@ -1,4 +1,5 @@
 #!/bin/bash
+# This script change color scheme to tropical sunset
 
 out_put=~/log/nmapA_list_color.html
 
