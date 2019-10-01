@@ -10,4 +10,4 @@ Set crontab -e for scripts.
 -Edit html: Show to hosts per page
 -Log rotate
 -Performance: parallel nmap -A
-
+-Distributed system with multiple servers?

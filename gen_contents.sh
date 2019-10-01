@@ -9,7 +9,9 @@ while IFS= read -r line
 do
     cd $line
     pwd
+    mv largest_log largest_log_bu
     du -b -a | sort -n -r | head -n 2 | grep log | awk '{print $2}' | xargs cat > largest_log 
+    cat largest_log | wc -l
     cd -
 
 done < /tmp/dir
