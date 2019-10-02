@@ -6,8 +6,7 @@ Idea; nmap shell script with cron job
 Set crontab -e for scripts.  
 
 # TODO
--Edit html: color shceme
--Edit html: Show to hosts per page
+-Summary table; IP MAC Hostname Memo?
+-Edit html: Show 10 hosts per page?
 -Log rotate
--Performance: parallel nmap -A
 -Distributed system with multiple servers?
