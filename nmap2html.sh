@@ -1,7 +1,7 @@
 #!/bin/bash
 # This script execute 3 scripts so that you only need set one cron job
 
-/bin/bash $HOME/device-monitoring/nmap_all_parallel.sh
+/bin/bash $HOME/device-monitoring/nmap_all.sh
 echo "Done: nmap all"
 
 /bin/bash $HOME/device-monitoring/gen_contents.sh
