@@ -27,7 +27,7 @@ cat ~/log/nmapA_list.txt |
 	sed -e "s/^Nmap.*\()<br>$\|[0-9]<br>$\)/<font color='#FF7E5F'><b>&<\/b><\/font>/g" |
 	sed "s/^PORT.*VERSION<br>$/<font color='#FF7E5F'><b>&<\/b><\/font>/g" |
 	sed "s/^MAC.*)<br>$/<font color='#FEB47B'><b>&<\/b><\/font>/g" |
-	sed "s/^[0-9][0-9].*<br>$/<font color='#FF7E5F'>&<\/font>/g" 	>> ${out_put}
+	sed "s/^[0-9][0-9].*\/.*<br>$/<font color='#FF7E5F'>&<\/font>/g" 	>> ${out_put}
 
        	
 echo "</xmp>" >> $out_put

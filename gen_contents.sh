@@ -25,6 +25,8 @@ find ~/log/nmapA/ -mindepth 2 -name "largest_log" | sort -V > /tmp/largest_logs
 REPORT_DATE=$(echo 'Report generated: ')
 REPORT_DATE+=$(date -Iminute)
 echo $REPORT_DATE >$TXT_FILE 
+echo "" >>$TXT_FILE
+cat $HOME/log/summary.txt >>$TXT_FILE
 cat /tmp/largest_logs | xargs cat | sed -e "s/Starting/\n\n----------\nStarting/g" >>$TXT_FILE 
 
 echo "<xmp>" >$HTML_FILE 
