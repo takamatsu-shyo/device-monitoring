@@ -1,5 +1,5 @@
 #!/bin/bash
-# This script execute 3 scripts so that you only need set one cron job
+# This script execute 3 scripts so that you only need set a cron job
 
 /bin/bash $HOME/device-monitoring/nmap_all.sh
 echo "Done: nmap all"
