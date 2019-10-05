@@ -18,7 +18,7 @@ awk 'match($1,/[0-9].*[0-9]/){print $0}' |
 sed 's/MAC Address: //g' > /tmp/summary_nohostname
 
 cat /tmp/summary_.txt | 
-awk 'match($2,/([0-9].*[0-9])/){print $2" "$1" "$5" "$6" "$7" "$8}' | 
+awk 'match($2,/([0-9].*[0-9])/){print $2" "$1" "$5" "$6" "$7" "$8" "$9}' | 
 sed 's/^(//g' | 
 sed 's/) / /g' |
 sed 's/\s*$/)/' > /tmp/summary_hostname 
