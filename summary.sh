@@ -29,6 +29,3 @@ sort -t . -k 3,3n -k 4,4n > $HOME/log/summary_now
 cat $HOME/log/summary_now $HOME/log/summary_last |
 sort -t . -k 3,3n -k 4,4n |
 uniq > $HOME/log/summary.txt
-
-
-#TODO: hostname, if MAC manufacturer contain space then lose after first space
